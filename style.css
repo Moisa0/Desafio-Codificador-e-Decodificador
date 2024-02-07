@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100%vh;
+    box-sizing: border-box;
+    background-image:-moz-linear-gradient(solid);
+    color: aliceblue;
+}
+
+.header_imagem{
+    width: 150px;
+    border-radius: 50%;
+    margin: 50px;
+}
