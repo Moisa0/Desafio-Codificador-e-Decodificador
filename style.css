@@ -88,6 +88,13 @@ main{
     justify-content: center;
 }
 
+.palavra__realce{
+    color: var(--cor-secundaria);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    
+}
+
 .main__entrada{
     display: flex;
     justify-content: center;
