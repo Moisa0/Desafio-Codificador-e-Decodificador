@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=VT323&display=swap');
 
 :root{
-    --fonte-primaria:'Chakra Petch', sans-serif;;
+    --fonte-primaria:'Caveat Brush', cursive;
 }
 :root{
     --cor-primaria:#202135;
@@ -13,13 +13,17 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
-body {
-    height: 100%vh;
+body{
+    height: 100vh;
+    width: 100%;
     box-sizing: border-box;
-    background-color: var(--cor-quartenaria);
     color: aliceblue;
+    background-image: url(assets/background_image.gif);
+    background-size:auto
+    
 }
 
 header{
@@ -33,19 +37,51 @@ header{
 
 .modo__botao{
     display: flex;
-    padding: 2rem 15rem;
-    border-radius: 50px;  
-    background-color: var(--cor-terciaria);
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 8rem;
+    border-radius: 4rem;  
+    border: solid;
+    border: 0.5rem solid;
+    border-color: white;
+    background-image: url(assets/botao.gif);
+    background-size: cover;
+}
+.modo__botao__1:hover{
+    background-image: url(assets/hover.gif);
+    .texto__modo__botao__1{
+        font-size: 4.2rem;
+        transition: 100ms linear;
+    }
+}
+.modo__botao__2:hover{
+    background-image: url(assets/hover.gif);
+    .texto__modo__botao__2{
+        font-size: 4.2rem;
+        transition: 100ms linear;
+    }    
+    
 }
 
-.texto__modo__botao{
+p{
     font-size: 4rem;
     font-family: var(--fonte-primaria);
+    color: white;
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
 }
 
 .main__texto{
-    color: black;
+    color: white;
+    margin-top: 2%;
     font-size: 5rem;
     font-family: var(--fonte-primaria);
     display: flex;
@@ -56,18 +92,79 @@ header{
     display: flex;
     justify-content: center;
     margin: 2%;
-    
-    
+    align-items: center;
+ 
 }
 
 .main__entrada__texto{
-    
-    width: 500px;
-    height: 100px;
+    width: 31rem;
+    height: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    font-family: var(--fonte-primaria);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.main__funcao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 7rem;
+    border-radius: 3rem;  
+    border: solid;
+    background-color: var(--cor-secundaria);
+    border: 0.5rem solid;
+    border-color: white; 
+}
+
+.main__funcao:hover{
+    background-color: var(--cor-primaria);
+    transition: 500ms;
+}
+
+.texto__função{
+    font-size: 2.5rem;  
+}
+
+.main__saida{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    margin-top: 5%;  
+}
+
+.main__saida__texto{
+    width: 44rem;
+    height: 4rem;
     border-radius: 19px;
     display: flex;
     justify-content: center;
     padding: 2%;
+    font-family: var(--fonte-primaria);
+    font-size: 3rem;
+    text-align: center;
 }
 
+.main__copiar{
+    width: 10rem;
+    height: 5rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-secundaria); 
+    border: 0.5rem solid;
+    border-color: white;
+}
 
+.main__copiar:hover{
+    background-color: var(--cor-primaria);
+    transition: 500ms;
+}
+.texto__copiar{
+    font-size: 2.5rem;
+}
