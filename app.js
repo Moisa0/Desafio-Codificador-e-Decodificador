@@ -1,0 +1,1 @@
+let textoPuro = document.querySelector("")
