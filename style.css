@@ -48,6 +48,7 @@ header{
     background-image: url(assets/botao.gif);
     background-size: cover;
 }
+
 .modo__botao__1:hover{
     background-image: url(assets/hover.gif);
     .texto__modo__botao__1{
@@ -57,12 +58,32 @@ header{
 }
 .modo__botao__2:hover{
     background-image: url(assets/hover.gif);
+    background-size: cover;
     .texto__modo__botao__2{
         font-size: 4.2rem;
         transition: 100ms linear;
     }    
-    
 }
+
+.modo__botao__1:active {
+    background-image: url(assets/hover.gif);
+  
+    .modo__botao__2{
+        background-image: url(assets/botao.gif);
+        background-size: cover;
+    }
+}
+
+.modo__botao__2:active {
+    background-image: url(assets/hover.gif);
+
+    .modo__botao__1{
+        background-image: url(assets/botao.gif);
+        background-size: cover;
+    }
+}
+
+
 
 p{
     font-size: 4rem;
