@@ -1,10 +1,28 @@
 let textoBotaoDinamico = document.querySelector(".texto__função")
 
-textoBotaoDinamico.innerHTML= ""
+let selecaoResgate = document.querySelectorAll("input[name='radio']")
+let result = document.getElementById("modo_1")
 
-function permanecerPressionado(){
 
-       
+let findSelected = ()=>{
+   let selected = document.querySelector("input[name='radio']:checked").value
+   console.log(`${selected}`)
+   result.textContent = `${selected}`
+}
+
+selecaoResgate.forEach(resgate=>{
+   resgate.addEventListener("change","findSelected");
+});
+
+findSelected();
+ 
+
+
+
+
+
+function continuarAnimacaoBotao(){
+   
 }
 
 function criptografarTexto(texto) {

@@ -45,50 +45,45 @@ header{
     border: solid;
     border: 0.5rem solid;
     border-color: white;
-    background-image: url(assets/botao.gif);
-    background-size: cover;
+    background-image: url(assets/back.gif);
+
 }
 
 .modo__botao__1:hover{
-    background-image: url(assets/hover.gif);
     .texto__modo__botao__1{
         font-size: 4.2rem;
         transition: 100ms linear;
     }
 }
 .modo__botao__2:hover{
-    background-image: url(assets/hover.gif);
-    background-size: cover;
+    
     .texto__modo__botao__2{
         font-size: 4.2rem;
         transition: 100ms linear;
     }    
 }
 
-.modo__botao__1:active {
-    background-image: url(assets/hover.gif);
-  
-    .modo__botao__2{
-        background-image: url(assets/botao.gif);
-        background-size: cover;
-    }
+.texto__modo__botao{
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--cor-secundaria);
+    
 }
-
-.modo__botao__2:active {
-    background-image: url(assets/hover.gif);
-
-    .modo__botao__1{
-        background-image: url(assets/botao.gif);
-        background-size: cover;
-    }
-}
-
-
 
 p{
     font-size: 4rem;
     font-family: var(--fonte-primaria);
     color: white;
+
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"]:checked + label{
+    background-image: url(./assets/hover.gif);
+    background-size: cover;
 
 }
 
