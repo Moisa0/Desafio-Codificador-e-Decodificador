@@ -120,7 +120,7 @@ main{
 }
 
 .main__entrada__texto{
-    width: 31rem;
+    width: 40rem;
     height: 4rem;
     border-radius: 1rem;
     display: flex;
@@ -129,6 +129,7 @@ main{
     font-family: var(--fonte-primaria);
     font-size: 3rem;
     text-align: center;
+    text-transform: lowercase;
 }
 
 .main__funcao{
@@ -158,11 +159,12 @@ main{
     justify-content: center;
     margin: 2%;
     margin-top: 5%;  
+    
 }
 
 .main__saida__texto{
     width: 44rem;
-    height: 4rem;
+    height: 8rem;
     border-radius: 19px;
     display: flex;
     justify-content: center;
@@ -170,6 +172,10 @@ main{
     font-family: var(--fonte-primaria);
     font-size: 3rem;
     text-align: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+
 }
 
 .main__copiar{
@@ -190,4 +196,13 @@ main{
 }
 .texto__copiar{
     font-size: 2.5rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
 }

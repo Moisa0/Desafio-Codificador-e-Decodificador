@@ -1,30 +1,24 @@
 let textoBotaoDinamico = document.querySelector(".texto__função")
 
-let selecaoResgate = document.querySelectorAll("input[name='radio']")
-let result = document.getElementById("modo_1")
+let modo = document.getElementsByName("nomeradio")
 
+let textoEntrada = document.querySelector(".main__entrada__texto")
 
-let findSelected = ()=>{
-   let selected = document.querySelector("input[name='radio']:checked").value
-   console.log(`${selected}`)
-   result.textContent = `${selected}`
-}
-
-selecaoResgate.forEach(resgate=>{
-   resgate.addEventListener("change","findSelected");
-});
-
-findSelected();
- 
+let textoSaida = document.querySelector(".main__saida__texto")
 
 
 
+function pegarchecked(){
+   
+   if(modo[0].checked){
+      textoBotaoDinamico.innerHTML="CODIFICADOR"
 
-
-function continuarAnimacaoBotao(){
+      
+   }else if(modo[1].checked){
+      textoBotaoDinamico.innerHTML="DECODIFICADOR"
    
 }
-
+}
 function criptografarTexto(texto) {
     const textoCriptografado = 
     texto.replace(/e/g, "enter")
@@ -36,6 +30,9 @@ function criptografarTexto(texto) {
     return textoCriptografado
  }
  
+ 
+
+
  function descriptografarTexto(texto) {
     const textoDescriptografado = 
     texto.replace(/enter/g, "e")
@@ -47,3 +44,31 @@ function criptografarTexto(texto) {
     return textoDescriptografado
  }
  
+
+ function selecionarFuncao(){
+   if(modo[0].checked){
+      let textinhoFinal = criptografarTexto(textoEntrada.value) 
+
+      textoSaida.innerHTML= textinhoFinal
+      
+   }
+   else if(modo[1].checked){
+
+      let textinhoFinal = descriptografarTexto(textoEntrada.value) 
+
+      textoSaida.innerHTML= textinhoFinal   
+   }
+ }
+
+ function copiarTexto(){
+   navigator.clipboard.writeText(textoSaida.innerHTML).then(()=>{
+      
+      alert(`O texto: ${textoSaida.innerHTML} foi copiado`)
+   })
+ }
+
+
+
+
+
+

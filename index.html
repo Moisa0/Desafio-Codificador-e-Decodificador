@@ -6,16 +6,16 @@
     <title>Cod/Decod</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
-    <script src="./app.js" defer></script>
+    
 </head>
 <body>
   
     <header class="modo">
 
-        <input type="radio" name="radio" id="modo_1" >
+        <input type="radio" onclick="pegarchecked()" name="nomeradio" id="modo_1" value="codificador">
         <label for="modo_1" class="modo__botao modo__botao__1"><p class="texto__modo__botao texto__modo__botao__1">CODIFICADOR</p></label>
 
-        <input type="radio" name="radio" id="modo_2">
+        <input type="radio" onclick="pegarchecked()" name="nomeradio" id="modo_2" value="decodificador">
         <label for="modo_2" class="modo__botao modo__botao__2" ><p class="texto__modo__botao texto__modo__botao__2">DECODIFICADOR</p></label>
 
 
@@ -27,21 +27,23 @@
         </div>
 
         <div class="main__entrada">
-            <input type="text" class="main__entrada__texto" placeholder="Digite aqui">
+            <input type="text" id="textoentrada" class="main__entrada__texto" placeholder="Digite aqui">
         </div>
 
         <div>
-            <button onclick="" class="main__funcao"><p class="texto__função"></p></button>
+            <button onclick="selecionarFuncao()" class="main__funcao"><p class="texto__função">Nenhum modo selecionado</p></button>
         </div>
         
-        <div class="main__saida">
-            <input type="text" class="main__saida__texto" placeholder="Sem texto por enquanto">
-        </div>
-        <div>
-            <button onclick="" class="main__copiar"><p class="texto__copiar">COPIAR</p></button>
-        </div>
-    
 
+    <div class="container">
+        
+            <textarea name="" id="" class="main__saida__texto main__saida" cols="30" rows="10" placeholder="Nada de novo por aqui" disabled></textarea>
+       
+        <div>
+            <button onclick="copiarTexto()" id="main__saida__texto" class="main__copiar"><p class="texto__copiar">Copiar</p></button>
+        </div>
+    </div>    
+        <script src="./app.js"></script>
     </main>
 </body>
 </html>
