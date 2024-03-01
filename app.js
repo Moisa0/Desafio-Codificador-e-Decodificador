@@ -6,17 +6,20 @@ let textoEntrada = document.querySelector(".main__entrada__texto")
 
 let textoSaida = document.querySelector(".main__saida__texto")
 
+let textotitulo = document.querySelector(".title")
+
+
 
 
 function pegarchecked(){
    
    if(modo[0].checked){
       textoBotaoDinamico.innerHTML="CODIFICADOR"
-
+      textotitulo.textContent="Codificador"
       
    }else if(modo[1].checked){
       textoBotaoDinamico.innerHTML="DECODIFICADOR"
-   
+      textotitulo.textContent="Decodificador"
 }
 }
 function criptografarTexto(texto) {
