@@ -208,6 +208,29 @@ main{
     gap: 2rem;
 }
 
+.footer{
+    text-align: center;
+    font-size: 2rem;
+    border: #959ddd;
+    margin-top: 2%;
+    
+}
+
+.footer-strong{
+    color:#959ddd;
+
+}
+
+a{
+    text-decoration:none;
+}
+
+@media (max-width: 1200px){
+    .main__texto{font-size: 4rem;
+
+    }
+}
+
 @media (max-width: 1080px){
     .container-final{
         display: flex;
@@ -225,6 +248,13 @@ main{
         overflow-y:auto;
         overflow-x:hidden;
       
+    }
+    .container-final{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 11rem;
+        gap: 0.2rem;
     }
 
 }
