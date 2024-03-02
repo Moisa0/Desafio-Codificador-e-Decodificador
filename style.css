@@ -223,6 +223,8 @@ main{
 
     body{
         overflow-y:auto;
+        overflow-x:hidden;
+      
     }
 
 }
@@ -328,5 +330,30 @@ main{
         font-family: var(--fonte-primaria);
         color: white;
     
+    }
+}
+
+@media (max-width: 580px){
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        padding-left: 18%;
+        gap: 2rem;
+        
+    }
+
+    .main__saida__texto{
+        width: 28rem;
+        height: 6rem;
+        font-size: 3rem;
+
+    }
+
+
+    .main__entrada__texto{
+        width: 25rem;
+        height: 4rem;
+
     }
 }
